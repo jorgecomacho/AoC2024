@@ -14,7 +14,6 @@ def read_file(fname):
 
 def summult(lines):
     total = 0
-    #for line in lines:
     result = re.finditer(r"mul\(\d{1,3},\d{1,3}\)", lines)
     for res in result:
         nums = re.findall(r"\d+", res.group())
@@ -26,7 +25,6 @@ def two(content):
     on = True
     total = 0
     for res in result:
-        print(on, res.group())
         if res.group() == 'do()':
             on = True
             continue
